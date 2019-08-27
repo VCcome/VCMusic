@@ -44,8 +44,8 @@ module.exports = {
         },
         onProxyRes(proxyRes, req, res) {
           // proxyRes.headers['x-added'] = 'foobar'; // add new header to response
-          // proxyRes.headers['Host'] = 'www.baidu.com';
-          // proxyRes.headers['Referer'] = 'https://www.baidu.com';
+          proxyRes.headers['Host'] = 'www.baidu.com';
+          proxyRes.headers['Referer'] = 'https://www.baidu.com';
         },
         onProxyReq(proxyReq, req, res) {
           // add custom header to request
