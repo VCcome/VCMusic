@@ -1,6 +1,14 @@
 export const ERR_OK = 0;
 
 export const commonParams = {
-  id: 1,
-  format: 'jsonp'
+  g_tk: 5381,
+  format: 'json',
+  loginUin: 0,
+  inCharset: 'utf8',
+  outCharset: 'utf-8',
+  notice: 0
+};
+
+export const options = {
+  param: 'jsonpCallback'
 };

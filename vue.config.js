@@ -19,7 +19,7 @@ module.exports = {
     port: '8080',
     proxy: {
       '/recommend': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8081',
         changeOrigin: true,
         pathRewrite: {
           '^/recommend': '/mockData/recommend.json'
@@ -63,6 +63,30 @@ module.exports = {
         onProxyReq(proxyReq, req, res) {
           // add custom header to request
           proxyReq.setHeader('Host', 'ustbhuangyi.com');
+        }
+      },
+      '/getSingerList': {
+        target: 'https://u.y.qq.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/getSingerList': '/cgi-bin/musicu.fcg'
+        },
+        onProxyReq(proxyReq, req, res) {
+          // add custom header to request
+          proxyReq.setHeader('Origin', 'https://y.qq.com');
+          proxyReq.setHeader('Referer', 'https://y.qq.com/portal/singer_list.html');
+        }
+      },
+      '/getRankList': {
+        target: 'https://u.y.qq.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/getRankList': '/cgi-bin/musicu.fcg'
+        },
+        onProxyReq(proxyReq, req, res) {
+          // add custom header to request
+          proxyReq.setHeader('Origin', 'https://y.qq.com');
+          proxyReq.setHeader('Referer', 'https://y.qq.com/portal/singer_list.html');
         }
       }
     }

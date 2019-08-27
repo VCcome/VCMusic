@@ -23,6 +23,7 @@ export function _getRecommend() {
   });
 };
 
+// @title 获取推荐歌曲列表
 export function _getDiscList() {
   return http.get('/getDiscList?g_tk=1928093487&inCharset=utf-8&outCharset=utf-8&notice=0&format=json&platform=yqq&hostUin=0&sin=0&ein=29&sortId=5&needNewCode=0&categoryId=10000000&rnd=0.5369668837061188')
     .then(res => {
