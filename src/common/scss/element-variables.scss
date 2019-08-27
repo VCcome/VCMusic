@@ -1,0 +1,7 @@
+/* 改变 element-ui 主题样式 */
+$--color-primary: #5477b1;
+
+/* 改变 icon 字体路径变量 */
+$--font-path: '../../../node_modules/element-ui/lib/theme-chalk/fonts';
+
+@import "../../../node_modules/element-ui/packages/theme-chalk/src/index.scss";

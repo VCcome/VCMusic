@@ -1,0 +1,59 @@
+// 颜色定义规范
+$color-background: #f2f2f2;
+$color-aside-background: #545c64;
+$color-aside-background-active: rgb(67, 74, 80);
+$color-theme: #5477b1;
+$theme-dark: #003399;
+$theme-shallow: #76a1e8;
+$theme-text: #00AAFF;
+$color-success: #67c23a;
+$color-warning: #eb9e05;
+$color-danger: #fa5555;
+$color-info: #878d99;
+
+// 文本颜色规范
+$color-main-font: #2D2F33;
+$color-convention-font: #5A5E66;
+$color-secondary-font: #878D99;
+$color-seize-font: #B4BCCC;
+
+//自定义定义背景颜色（el-ui）
+$color-background-homePage: #e9eef3;
+//框框中的背景颜色
+$color-background-content: #f9f9f9;
+
+// 边框颜色定义
+$color-first-border: #b4bccc; //通知、随访任务
+$color-second-border: #DFE4ED;
+$color-third-border: #E6EBF5;
+$color-forth-border: #EDF2FC;
+
+//字体定义规范
+$font-extra-large: 0.2rem;
+$font-large: 0.18rem;
+$font-medium: 0.16rem;
+$font-small: 0.14rem;
+$font-extra-small: 0.13rem;
+$font-extra-extra-small: 0.12rem;
+
+// vue-music定义
+// 颜色定义规范
+$color-background : #222;
+$color-background-d : rgba(0, 0, 0, 0.3);
+$color-highlight-background : #333;
+$color-dialog-background : #666;
+$color-theme : #ffcd32;
+$color-theme-d : rgba(255, 205, 49, 0.5);
+$color-sub-theme : #d93f30;
+$color-text : #fff;
+$color-text-d : rgba(255, 255, 255, 0.3);
+$color-text-l : rgba(255, 255, 255, 0.5);
+$color-text-ll : rgba(255, 255, 255, 0.8);
+
+//字体定义规范
+$font-size-small-s : 10px;
+$font-size-small : 12px;
+$font-size-medium : 14px;
+$font-size-medium-x : 16px;
+$font-size-large : 18px;
+$font-size-large-x : 22px;
