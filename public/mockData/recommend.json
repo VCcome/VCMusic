@@ -1,0 +1,35 @@
+{
+  "message": "",
+  "code": 0,
+  "data": {
+    "slider": [
+      {
+        "linkUrl": "www.baidu.com",
+        "picUrl": "mockPic/1.jpg",
+        "id": 9179
+      },
+      {
+        "linkUrl": "www.baidu.com",
+        "picUrl": "mockPic/2.jpg",
+        "id": 9178
+      },
+      {
+        "linkUrl": "www.baidu.com",
+        "picUrl": "mockPic/3.jpg",
+        "id": 9177
+      },
+      {
+        "linkUrl": "www.baidu.com",
+        "picUrl": "mockPic/4.jpg",
+        "id": 9176
+      }
+    ],
+    "radioList": [
+      {
+        "linkUrl": "www.baidu.com",
+        "picUrl": "../mockData",
+        "id": 9179
+      }
+    ]
+  }
+}
