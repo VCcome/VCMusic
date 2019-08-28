@@ -1,5 +1,7 @@
 const path = require('path');
 
+// const proxyConfig = require('./');
+
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -19,21 +21,17 @@ module.exports = {
     port: '8080',
     proxy: {
       '/recommend': {
-        target: 'http://localhost:8081',
+        target: 'http://localhost:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/recommend': '/mockData/recommend.json'
         },
-        onProxyRes(proxyRes, req, res) {
-          // proxyRes.headers['x-added'] = 'foobar'; // add new header to response
-          proxyRes.headers['Host'] = 'www.baidu.com';
-          proxyRes.headers['Referer'] = 'https://www.baidu.com';
-        },
-        onProxyReq(proxyReq, req, res) {
-          // add custom header to request
-          // proxyReq.setHeader('Host', 'www.baidu.com');
-          // proxyReq.setHeader('Referer', 'https://www.baidu.com');
-          // or log the req
+      },
+      '/singerList': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/singerList': '/mockData/singer.json'
         }
       },
       '/baidu': {
@@ -66,10 +64,10 @@ module.exports = {
         }
       },
       '/getSingerList': {
-        target: 'https://u.y.qq.com',
+        target: 'https://c.y.qq.com',
         changeOrigin: true,
         pathRewrite: {
-          '^/getSingerList': '/cgi-bin/musicu.fcg'
+          '^/getSingerList': '/v8/fcg-bin/v8.fcg'
         },
         onProxyReq(proxyReq, req, res) {
           // add custom header to request

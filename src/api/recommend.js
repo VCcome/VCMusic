@@ -4,7 +4,7 @@ import * as http from 'common/js/http';
 
 // @title 获取推荐轮播图数据
 export function _getRecommend() {
-  let url = '/recommend?h=1';
+  let url = '/recommend';
   // const data = Object.assign({}, commonParams, {
   //   formData: '此处为自定义数据'
   // });

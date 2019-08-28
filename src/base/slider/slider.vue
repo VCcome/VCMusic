@@ -41,13 +41,22 @@ export default {
       this.setSliderWidth();
       this.initDots();
       this.initSlider();
+
       if (this.autoPlay) {
         this.play();
       }
     }, 20);
     window.addEventListener('resize', () => {
+      if (!this.slider) {
+        return;
+      }
+      console.log('resize');
       this.setSliderWidth(true);
       this.slider.refresh();
+      // 不生效 todo
+      this.$nextTick(() => {
+        this.slider.refresh();
+      });
     });
   },
   destroyed() {
@@ -70,7 +79,11 @@ export default {
       }
       this.$refs.sliderGroup.style.width = width + 'px';
       if (isResize) {
+        console.log('setWidth');
         this.slider.refresh();
+        this.$nextTick(() => {
+          this.slider.refresh();
+        });
       }
     },
     initDots() {
@@ -89,11 +102,7 @@ export default {
       this.slider.on('scrollEnd', () => {
         let pageIndex = this.slider.getCurrentPage().pageX;
         if (this.loop) {
-          // pageIndex -= 1;
-        }
-        if (pageIndex > this.children.length - 1) {
-          pageIndex = 0;
-          this.slider.goToPage(pageIndex, 0, 400);
+          pageIndex -= 1;
         }
         this.currentPageIndex = pageIndex;
         if (this.autoPlay) {
@@ -105,10 +114,7 @@ export default {
     play() {
       let pageIndex = this.currentPageIndex + 1;
       if (this.loop) {
-        // pageIndex += 1;
-      }
-      if (pageIndex > this.dots.length) {
-        pageIndex = 0;
+        pageIndex += 1;
       }
       this.timer = setTimeout(() => {
         this.slider.goToPage(pageIndex, 0, 400);
@@ -145,7 +151,7 @@ export default {
       img {
         display: block;
         width: 100%;
-        height: 180px;
+        // height: 180px;
       }
     }
   }
