@@ -1,0 +1,2265 @@
+{
+  "singer": {
+    "data": {
+      "songlist": [
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704309,
+          "type": 0,
+          "mid": "002qpjAV2lYx81",
+          "name": "慢半拍",
+          "title": "慢半拍",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            },
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "VC",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1551357,
+            "vid": "q0031nsvyig",
+            "name": "",
+            "title": ""
+          },
+          "interval": 241,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002qpjAV2lYx81",
+            "size_24aac": 750395,
+            "size_48aac": 1472258,
+            "size_96aac": 2945138,
+            "size_192ogg": 5619032,
+            "size_192aac": 5845102,
+            "size_128mp3": 3867562,
+            "size_320mp3": 9668627,
+            "size_ape": 0,
+            "size_flac": 54146718,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6046621,
+            "mid": "002rPRvH22OGMz"
+          },
+          "volume": {
+            "gain": -9.289,
+            "peak": 1,
+            "lra": 9.593
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704309.wma",
+          "bpm": 68,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704389,
+          "type": 0,
+          "mid": "003clL2S0lVVSF",
+          "name": "这么久没见",
+          "title": "这么久没见",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1558020,
+            "vid": "p0031iykx27",
+            "name": "",
+            "title": ""
+          },
+          "interval": 295,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 3,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "003clL2S0lVVSF",
+            "size_24aac": 921627,
+            "size_48aac": 1812547,
+            "size_96aac": 3612125,
+            "size_192ogg": 6488173,
+            "size_192aac": 7147160,
+            "size_128mp3": 4728140,
+            "size_320mp3": 11820071,
+            "size_ape": 0,
+            "size_flac": 29616271,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6098917,
+            "mid": "002xjxfP0KxNd3"
+          },
+          "volume": {
+            "gain": -6.937,
+            "peak": 0.966,
+            "lra": 13.871
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704389.wma",
+          "bpm": 58,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 233704216,
+          "type": 0,
+          "mid": "003iHc0e2UIgMC",
+          "name": "木偶人",
+          "title": "木偶人",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 7064087,
+            "mid": "000DMpJ73yeITP",
+            "name": "尘",
+            "title": "尘",
+            "subtitle": "",
+            "time_public": "2019-08-25"
+          },
+          "mv": {
+            "id": 1543591,
+            "vid": "h0031bjey3f",
+            "name": "",
+            "title": ""
+          },
+          "interval": 286,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 1,
+          "time_public": "2019-08-25",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "003iHc0e2UIgMC",
+            "size_24aac": 889929,
+            "size_48aac": 1748373,
+            "size_96aac": 3494371,
+            "size_192ogg": 6211907,
+            "size_192aac": 6935213,
+            "size_128mp3": 4587292,
+            "size_320mp3": 11467945,
+            "size_ape": 0,
+            "size_flac": 28667606,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 6012880,
+            "mid": "002iVB9R1WDUUH"
+          },
+          "volume": {
+            "gain": -7.36,
+            "peak": 0.966,
+            "lra": 11.183
+          },
+          "label": "0",
+          "url": "http://stream0.qqmusic.qq.com/245704216.wma",
+          "bpm": 58,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 102636799,
+          "type": 0,
+          "mid": "001Qu4I30eVFYb",
+          "name": "演员",
+          "title": "演员",
+          "subtitle": "",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 989994,
+            "mid": "003y8dsH2wBHlo",
+            "name": "绅士",
+            "title": "绅士",
+            "subtitle": "",
+            "time_public": "2015-06-05"
+          },
+          "mv": {
+            "id": 370246,
+            "vid": "o0016t2ucce",
+            "name": "",
+            "title": ""
+          },
+          "interval": 261,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2015-06-05",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "003mBrF72dILfK",
+            "size_24aac": 814314,
+            "size_48aac": 1600819,
+            "size_96aac": 3207473,
+            "size_192ogg": 5627900,
+            "size_192aac": 6344241,
+            "size_128mp3": 4181035,
+            "size_320mp3": 10452304,
+            "size_ape": 0,
+            "size_flac": 48354687,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 147334,
+            "mid": "002YpXig2VGh1g"
+          },
+          "volume": {
+            "gain": -6.466,
+            "peak": 0.966,
+            "lra": 5.916
+          },
+          "label": "5764607523038429185",
+          "url": "http://stream4.qqmusic.qq.com/114636799.wma",
+          "bpm": 0,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 107192538,
+          "type": 0,
+          "mid": "001TXSYu1Gwuwv",
+          "name": "刚刚好",
+          "title": "刚刚好",
+          "subtitle": "《我与你的光年距离》网络剧主题曲|《总裁误宠替身甜妻》网络剧主题曲",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 1376305,
+            "mid": "000dcZ9I1nzO62",
+            "name": "初学者",
+            "title": "初学者",
+            "subtitle": "《我与你的光年距离》网络剧主题曲|《总裁误宠替身甜妻》网络剧主题曲",
+            "time_public": "2016-07-18"
+          },
+          "mv": {
+            "id": 752523,
+            "vid": "c00200si22o",
+            "name": "",
+            "title": ""
+          },
+          "interval": 250,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2016-07-18",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "000PcSos12VDrz",
+            "size_24aac": 777770,
+            "size_48aac": 1528857,
+            "size_96aac": 3054190,
+            "size_192ogg": 5435074,
+            "size_192aac": 6060108,
+            "size_128mp3": 4008840,
+            "size_320mp3": 10021810,
+            "size_ape": 0,
+            "size_flac": 24163825,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 2309966,
+            "mid": "000RPMWt1HrYXK"
+          },
+          "volume": {
+            "gain": -8.214,
+            "peak": 1,
+            "lra": 16.382
+          },
+          "label": "4611686018431582209",
+          "url": "http://stream5.qqmusic.qq.com/119192538.wma",
+          "bpm": 0,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 5106590,
+          "type": 0,
+          "mid": "004dADLe4ec8RG",
+          "name": "意外",
+          "title": "意外",
+          "subtitle": "《如果我爱你》电视剧插曲",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 443691,
+            "mid": "000QgFcm0v8WaF",
+            "name": "意外",
+            "title": "意外",
+            "subtitle": "《如果我爱你》电视剧插曲",
+            "time_public": "2013-11-11"
+          },
+          "mv": {
+            "id": 266990,
+            "vid": "f00138jq44x",
+            "name": "",
+            "title": ""
+          },
+          "interval": 287,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 2,
+          "time_public": "2013-11-11",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "001F8BTd1TZYWZ",
+            "size_24aac": 891089,
+            "size_48aac": 1744754,
+            "size_96aac": 3520167,
+            "size_192ogg": 6708302,
+            "size_192aac": 6978624,
+            "size_128mp3": 4600248,
+            "size_320mp3": 11500337,
+            "size_ape": 0,
+            "size_flac": 33975760,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 80730,
+            "mid": "004B65W24O6Jst"
+          },
+          "volume": {
+            "gain": -9.426,
+            "peak": 1,
+            "lra": 10.623
+          },
+          "label": "4611686153727246337",
+          "url": "http://stream1.qqmusic.qq.com/17106590.wma",
+          "bpm": 0,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 107439472,
+          "type": 0,
+          "mid": "004VBMk71TdUuR",
+          "name": "我好像在哪见过你",
+          "title": "我好像在哪见过你",
+          "subtitle": "《精灵王座》动画电影主题曲",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 1376305,
+            "mid": "000dcZ9I1nzO62",
+            "name": "初学者",
+            "title": "初学者",
+            "subtitle": "《精灵王座》动画电影主题曲",
+            "time_public": "2016-07-18"
+          },
+          "mv": {
+            "id": 806046,
+            "vid": "b0020rlv2g6",
+            "name": "",
+            "title": ""
+          },
+          "interval": 279,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 3,
+          "time_public": "2016-07-18",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "004VBMk71TdUuR",
+            "size_24aac": 884247,
+            "size_48aac": 1760048,
+            "size_96aac": 3472268,
+            "size_192ogg": 6221376,
+            "size_192aac": 6663613,
+            "size_128mp3": 4467779,
+            "size_320mp3": 11169128,
+            "size_ape": 26809411,
+            "size_flac": 27226873,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 81133,
+            "try_end": 109857,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 2313189,
+            "mid": "0004XhOk0xq1Aj"
+          },
+          "volume": {
+            "gain": -7.059,
+            "peak": 0.977,
+            "lra": 9.575
+          },
+          "label": "4611686153723052033",
+          "url": "http://stream4.qqmusic.qq.com/119439472.wma",
+          "bpm": 62,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 5106429,
+          "type": 0,
+          "mid": "000QwTVo0YHdcP",
+          "name": "丑八怪",
+          "title": "丑八怪",
+          "subtitle": "《如果我爱你》电视剧插曲",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 443691,
+            "mid": "000QgFcm0v8WaF",
+            "name": "意外",
+            "title": "意外",
+            "subtitle": "《如果我爱你》电视剧插曲",
+            "time_public": "2013-11-11"
+          },
+          "mv": {
+            "id": 245763,
+            "vid": "u00139g552o",
+            "name": "",
+            "title": ""
+          },
+          "interval": 248,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 1,
+          "time_public": "2013-11-11",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "002EsKmq1Mtjpi",
+            "size_24aac": 775685,
+            "size_48aac": 1518820,
+            "size_96aac": 3062857,
+            "size_192ogg": 5464913,
+            "size_192aac": 6038673,
+            "size_128mp3": 3976237,
+            "size_320mp3": 9939803,
+            "size_ape": 0,
+            "size_flac": 24808629,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 3442345,
+            "mid": "002F9OYF0BgpND"
+          },
+          "volume": {
+            "gain": -5.567,
+            "peak": 1,
+            "lra": 14.419
+          },
+          "label": "4611686018431582209",
+          "url": "http://stream1.qqmusic.qq.com/17106429.wma",
+          "bpm": 0,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 5106430,
+          "type": 0,
+          "mid": "002BWGZQ2UKjKn",
+          "name": "你还要我怎样",
+          "title": "你还要我怎样",
+          "subtitle": "《妈妈像花儿一样》电视剧片尾曲|《如果我爱你》电视剧插曲",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 443691,
+            "mid": "000QgFcm0v8WaF",
+            "name": "意外",
+            "title": "意外",
+            "subtitle": "《妈妈像花儿一样》电视剧片尾曲|《如果我爱你》电视剧插曲",
+            "time_public": "2013-11-11"
+          },
+          "mv": {
+            "id": 268529,
+            "vid": "y00131c5aqf",
+            "name": "",
+            "title": ""
+          },
+          "interval": 310,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 3,
+          "time_public": "2013-11-11",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "003odRSi1odVpq",
+            "size_24aac": 968025,
+            "size_48aac": 1900394,
+            "size_96aac": 3821871,
+            "size_192ogg": 6398751,
+            "size_192aac": 7548367,
+            "size_128mp3": 4976420,
+            "size_320mp3": 12440753,
+            "size_ape": 0,
+            "size_flac": 27550792,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 101744,
+            "try_end": 140372,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 77243,
+            "mid": "001a2lLp1KG6bk"
+          },
+          "volume": {
+            "gain": -5.572,
+            "peak": 1,
+            "lra": 19.013
+          },
+          "label": "4611686018431582209",
+          "url": "http://stream1.qqmusic.qq.com/17106430.wma",
+          "bpm": 95,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        },
+        {
+          "id": 102425546,
+          "type": 0,
+          "mid": "001CG3wA3QkuJS",
+          "name": "绅士",
+          "title": "绅士",
+          "subtitle": "《是！尚先生》电视剧插曲|《记忆清除者》网络大电影插曲",
+          "singer": [
+            {
+              "id": 5062,
+              "mid": "002J4UUk29y8BY",
+              "name": "薛之谦",
+              "title": "薛之谦",
+              "type": 0,
+              "uin": 0
+            }
+          ],
+          "album": {
+            "id": 989994,
+            "mid": "003y8dsH2wBHlo",
+            "name": "绅士",
+            "title": "绅士",
+            "subtitle": "《是！尚先生》电视剧插曲|《记忆清除者》网络大电影插曲",
+            "time_public": "2015-06-05"
+          },
+          "mv": {
+            "id": 354285,
+            "vid": "z0016p7fv5s",
+            "name": "",
+            "title": ""
+          },
+          "interval": 290,
+          "isonly": 0,
+          "language": 0,
+          "genre": 1,
+          "index_cd": 0,
+          "index_album": 1,
+          "time_public": "2015-06-05",
+          "status": 31,
+          "fnote": 0,
+          "file": {
+            "media_mid": "0029cBk90JB3e9",
+            "size_24aac": 901389,
+            "size_48aac": 1767240,
+            "size_96aac": 3547516,
+            "size_192ogg": 6446405,
+            "size_192aac": 7046983,
+            "size_128mp3": 4657091,
+            "size_320mp3": 11642443,
+            "size_ape": 0,
+            "size_flac": 31722118,
+            "size_dts": 0,
+            "size_try": 0,
+            "try_begin": 0,
+            "try_end": 0,
+            "url": "",
+            "size_hires": 0,
+            "hires_sample": 0,
+            "hires_bitdepth": 0,
+            "b_30s": 0,
+            "e_30s": 0
+          },
+          "pay": {
+            "pay_month": 0,
+            "price_track": 0,
+            "price_album": 0,
+            "pay_play": 0,
+            "pay_down": 0,
+            "pay_status": 0,
+            "time_free": 0
+          },
+          "action": {
+            "switch": 605983,
+            "msgid": 0,
+            "alert": 11,
+            "icons": 135752,
+            "msgshare": 0,
+            "msgfav": 0,
+            "msgdown": 0,
+            "msgpay": 0
+          },
+          "ksong": {
+            "id": 159030,
+            "mid": "0023YL6v4aMxrG"
+          },
+          "volume": {
+            "gain": -8.174,
+            "peak": 1,
+            "lra": 8.591
+          },
+          "label": "5764607658329899009",
+          "url": "http://stream4.qqmusic.qq.com/114425546.wma",
+          "bpm": 0,
+          "version": 0,
+          "trace": "",
+          "data_type": 0,
+          "modify_stamp": 0,
+          "pingpong": ""
+        }
+      ],
+      "singer_info": {
+        "area": 1,
+        "attribute4": 0,
+        "genre": 0,
+        "other_name": "",
+        "id": 5062,
+        "mid": "002J4UUk29y8BY",
+        "name": "薛之谦",
+        "fans": 14502503
+      },
+      "singer_brief": "薛之谦，一个好听可爱的名字，猛然间在2005年的夏天闯入很多人的生活中，从此，人们便记住了一个即调皮又懂事的大男孩。2005年度“我型我SHOW”选手中拥有最旺人气的一位。一把吉他，一首《黄色枫叶》，一首《他对你好吗》，富含感情的表演，仿佛在告诉人们，他的背后有很长一段故事。",
+      "music_grp": [],
+      "total_album": 16,
+      "total_mv": 269,
+      "total_song": 282,
+      "yinyueren": "0",
+      "show_singer_desc": true,
+      "extras": [
+        {
+          "listen_count": 153440103,
+          "upload_time": "2019-06-25 16:05:27",
+          "is_only": 0,
+          "is_new": 1
+        },
+        {
+          "listen_count": 149728903,
+          "upload_time": "2019-06-25 16:05:34",
+          "is_only": 0,
+          "is_new": 1
+        },
+        {
+          "listen_count": 148985043,
+          "upload_time": "2019-06-25 16:04:00",
+          "is_only": 0,
+          "is_new": 1
+        },
+        {
+          "listen_count": 136391306,
+          "upload_time": "2015-06-04 15:47:51",
+          "is_only": 0,
+          "is_new": 0
+        },
+        {
+          "listen_count": 124591548,
+          "upload_time": "2016-06-06 17:33:36",
+          "is_only": 0,
+          "is_new": 0
+        },
+        {
+          "listen_count": 122736666,
+          "upload_time": "2013-12-12 17:35:00",
+          "is_only": 0,
+          "is_new": 0
+        },
+        {
+          "listen_count": 122696933,
+          "upload_time": "2016-06-23 19:43:47",
+          "is_only": 0,
+          "is_new": 0
+        },
+        {
+          "listen_count": 121397019,
+          "upload_time": "2013-12-12 15:49:12",
+          "is_only": 0,
+          "is_new": 0
+        },
+        {
+          "listen_count": 121386997,
+          "upload_time": "2013-12-12 15:49:12",
+          "is_only": 0,
+          "is_new": 0
+        },
+        {
+          "listen_count": 121232438,
+          "upload_time": "2015-05-19 17:22:29",
+          "is_only": 0,
+          "is_new": 0
+        }
+      ]
+    },
+    "code": 0
+  },
+  "code": 0,
+  "ts": 1567063137192
+}

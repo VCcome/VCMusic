@@ -13,19 +13,25 @@ export default new Router({
     },
     {
       path: '/recommend',
-      component: () => import(/* webpackChunkName: "about" */ '../views/recommend/recommend.vue')
+      component: () => import(/* webpackChunkName: "recommend" */ '../views/recommend/recommend.vue')
     },
     {
       path: '/singer',
-      component: () => import(/* webpackChunkName: "about" */ '../views/singer/singer.vue')
+      component: () => import(/* webpackChunkName: "singer" */ '../views/singer/singer.vue'),
+      children: [
+        {
+          path: ':id',
+          component: () => import(/* webpackChunkName: "singer" */ '../views/singer-detail/singer-detail.vue')
+        }
+      ]
     },
     {
       path: '/rank',
-      component: () => import(/* webpackChunkName: "about" */ '../views/rank/rank.vue')
+      component: () => import(/* webpackChunkName: "rank" */ '../views/rank/rank.vue')
     },
     {
       path: '/search',
-      component: () => import(/* webpackChunkName: "about" */ '../views/search/search.vue')
+      component: () => import(/* webpackChunkName: "search" */ '../views/search/search.vue')
     },
     {
       path: '/about',

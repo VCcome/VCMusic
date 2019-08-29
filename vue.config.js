@@ -20,20 +20,6 @@ module.exports = {
   devServer: {
     port: '8080',
     proxy: {
-      '/recommend': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/recommend': '/mockData/recommend.json'
-        },
-      },
-      '/singerList': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/singerList': '/mockData/singer.json'
-        }
-      },
       '/baidu': {
         target: 'https://www.baidu.com',
         changeOrigin: true,
