@@ -6,7 +6,8 @@ export const commonParams = {
   loginUin: 0,
   inCharset: 'utf8',
   outCharset: 'utf-8',
-  notice: 0
+  notice: 0,
+  guid: 5527834659
 };
 
 export const options = {

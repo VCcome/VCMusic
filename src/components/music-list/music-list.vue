@@ -18,7 +18,7 @@
     <div class="bg-layer" ref="layer" :style="layerStyle"></div>
     <scroll @scroll="scroll" :data="songs" :probe-type="probeType" :listen-scroll="listenScroll" class="list" ref="list">
       <div class="song-list-wrapper">
-        <song-list :songs="songs"></song-list>
+        <song-list :songs="songs" @select="selectSong"></song-list>
       </div>
     </scroll>
     <loading v-show="!this.songs"></loading>
@@ -29,6 +29,8 @@
 import Scroll from '@/base/scroll/scroll';
 import Loading from '@/base/loading/loading';
 import SongList from '@/base/song-list/song-list';
+import { mapActions, mapGetters } from 'vuex';
+import { getVKey } from 'api/song';
 
 const RESERVED_HEIGHT = 40; // 滚动覆盖时顶部预留高度
 
@@ -98,21 +100,13 @@ export default {
       webkit-transform: scale(${scale})`;
       return style;
     },
-    layerStyles() { // 设置跟随滚动的遮罩层滚送距离
+    layerStyle() { // 设置跟随滚动的遮罩层滚送距离
       let translateHeight = Math.max(this.minTranslateY, this.scrollY); // minTranslateY&scrollY为负数
       return `transform: translate3d(0, ${translateHeight}px, 0); 
       webkit-transform: translate3d(0, ${translateHeight}px, 0);
       `;
     },
-    layerStyle: {
-      get() {
-        let translateHeight = Math.max(this.minTranslateY, this.scrollY); // minTranslateY&scrollY为负数
-        return `transform: translate3d(0, ${translateHeight}px, 0); webkit-transform: translate3d(0, ${translateHeight}px, 0);
-      `;
-      },
-      set() {
-      }
-    }
+    ...mapGetters([])
   },
   watch: {
     scrollY(newY) {
@@ -132,12 +126,27 @@ export default {
     }
   },
   methods: {
+    selectSong(song, index) {
+      // let that = this;
+      getVKey(song.mid).then(res => {
+        console.log(res);
+        this.songs[index].url += res;
+        console.log(this.songs[index]);
+        this.selectPlay({
+          list: this.songs,
+          index
+        });
+      });
+    },
     back() {
       this.$router.back();
     },
     scroll(pos) {
       this.scrollY = pos.y; // return滚动距离
-    }
+    },
+    ...mapActions([
+      'selectPlay'
+    ])
   }
 };
 </script>

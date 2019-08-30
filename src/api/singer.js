@@ -17,7 +17,7 @@ export function _getSingerList () {
 
 // 参数：singermid=002J4UUk29y8BY
 // const singerDetailUrl = 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=getUCGI8970247672194587&g_tk=727719371&loginUin=1293830737&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0&data=%7B%22comm%22%3A%7B%22ct%22%3A24%2C%22cv%22%3A0%7D%2C%22singer%22%3A%7B%22method%22%3A%22get_singer_detail_info%22%2C%22param%22%3A%7B%22sort%22%3A5%2C%22singermid%22%3A%22002J4UUk29y8BY%22%2C%22sin%22%3A0%2C%22num%22%3A10%7D%2C%22module%22%3A%22music.web_singer_info_svr%22%7D%7D';
-const singerDetailUrl = '/mockData/singer-detail.json';
+const singerDetailUrl = '/mockData/singer-songs.json';
 
 // @title 获取歌手详情
 export function getSingerDetail () {

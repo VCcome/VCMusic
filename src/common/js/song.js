@@ -20,8 +20,8 @@ export function createSong(musicData) {
     album: musicData.album.name,
     duration: musicData.interval,
     image: `https://y.gtimg.cn/music/photo_new/T002R300x300M000${musicData.album.mid}.jpg?max_age=2592000`,
-    url: `http://211.97.73.156/amobile.music.tc.qq.com/C400${musicData.file.media_mid}.m4a?guid=5527834659&vkey=F84F84F7101642CE3D3BBAEF00967A243C89E80C5FDF1F1CA1E845C8D223EB2EA95FE7A5C0D900343AAB2F938BDBC07287335E3C5BC815F6&uin=2641&fromtag=66`
-
+    url: `http://211.97.73.156/amobile.music.tc.qq.com/C400${musicData.mid}.m4a?guid=5527834659&fromtag=66&vkey=`
+    // url: `http://211.97.73.156/amobile.music.tc.qq.com/C400002qpjAV2lYx81.m4a?guid=5527834659&fromtag=66&vkey=061CA4B8712FE7A373099964157D78782D83475EDB91A9A2E8CE51EEDD61520D597FFC3A075EFE10F8F5E2C72CEB8D25E4E46D0EEB03AF8E`
   });
 }
 

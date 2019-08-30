@@ -61,6 +61,18 @@ module.exports = {
           proxyReq.setHeader('Referer', 'https://y.qq.com/portal/singer_list.html');
         }
       },
+      '/getVKey': {
+        target: 'https://c.y.qq.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/getVKey': '/base/fcgi-bin/fcg_music_express_mobile3.fcg'
+        },
+        onProxyReq(proxyReq, req, res) {
+          // add custom header to request
+          proxyReq.setHeader('Origin', 'https://c.y.qq.com');
+          // proxyReq.setHeader('Referer', 'https://y.qq.com/portal/singer_list.html');
+        }
+      },
       '/getRankList': {
         target: 'https://u.y.qq.com',
         changeOrigin: true,
