@@ -1,6 +1,6 @@
 <template>
   <div class="music-list">
-    <div class="back">
+    <div class="back" @click="back">
       <i class="icon-back"></i>
     </div>
     <h1 class="title" v-html="title"></h1>
@@ -57,14 +57,14 @@ export default {
     bgStyle() {
       return `background-image: url(${this.bgImage})`;
     },
-    layerStyle() {
+    layerStyle() { // 设置跟随滚动的遮罩层滚送距离
       let translateHeight = Math.max(this.minTranslateY, this.scrollY);
       return `transform: translate3d(0, ${translateHeight}px, 0)`;
     }
   },
   watch: {
     scrollY(newY) {
-      // 用computed代替watch
+      // 用computed代替watch————layerStyle()
       // let translateHeight = Math.max(this.minTranslateY, newY);
       // this.$refs.layer.style.transform = `translate3d(0, ${translateHeight}px, 0)`;
     }
@@ -74,11 +74,14 @@ export default {
     this.listenScroll = true;
   },
   mounted() {
-    this.imageHeight = this.$refs.bgImage.clientHeight;
-    this.minTranslateY = -this.imageHeight + RESERVED_HEIGHT;
-    this.$refs.list.$el.style.top = `${this.imageHeight}px`;
+    this.imageHeight = this.$refs.bgImage.clientHeight; // bg高度
+    this.minTranslateY = -this.imageHeight + RESERVED_HEIGHT; // 跟随滚动的遮罩层的最小滚动距离
+    this.$refs.list.$el.style.top = `${this.imageHeight}px`; // 设置歌曲列表的top值
   },
   methods: {
+    back() {
+      this.$router.back();
+    },
     scroll(pos) {
       this.scrollY = pos.y;
     }
