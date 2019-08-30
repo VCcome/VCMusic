@@ -47,7 +47,7 @@ export default {
     };
   },
   computed: {
-    shortcutList() { // 右边字母快捷方式数据
+    shortcutList() { // return右边字母快捷方式数据
       return this.data.map((group) => {
         return group.title.substr(0, 1);
       });
@@ -55,7 +55,7 @@ export default {
   },
   created() {
     this.touch = {};
-    this.listenScroll = true;
+    this.listenScroll = true; // BScroll配置
     this.listHeight = []; // 记录左边列表每个区间的累计高度
     this.probeType = 3; // BScroll配置：可以监听不节流滚动
   },

@@ -9,6 +9,7 @@
 import { _getSingerList } from 'api/singer';
 import Singer from 'common/js/singer';
 import { mapMutations } from 'vuex';
+import { SET_SINGER } from '@/store/mutation-types';
 
 import ListView from '@/base/list-view/list-view';
 
@@ -84,7 +85,7 @@ export default {
       return hot.concat(ret);
     },
     ...mapMutations({
-      setSinger: 'SET_SINGER'
+      setSinger: SET_SINGER
     })
   }
 };

@@ -47,7 +47,7 @@ export default {
       getSingerDetail().then(res => {
         // console.log(res.songlist);
         this.songs = this._normalizeSongs(res.songlist);
-        console.log(this.songs); // Song类型
+        // console.log(this.songs); // Song类型
       });
     },
     _normalizeSongs(list) {
