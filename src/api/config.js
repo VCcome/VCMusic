@@ -1,4 +1,5 @@
 export const ERR_OK = 0;
+export const NET_WORK = true;
 
 export const commonParams = {
   g_tk: 5381,

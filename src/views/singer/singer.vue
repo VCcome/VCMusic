@@ -1,6 +1,7 @@
 <template>
   <div class="singer" ref="singer">
-    <list-view :data="singerList" @select="selectSinger"></list-view>
+    <list-view :data="singerList" @select="selectSinger" ref="list"></list-view>
+    <!-- 歌手详情的路由入口 -->
     <router-view></router-view>
   </div>
 </template>
@@ -10,6 +11,7 @@ import { _getSingerList } from 'api/singer';
 import Singer from 'common/js/singer';
 import { mapMutations } from 'vuex';
 import { SET_SINGER } from '@/store/mutation-types';
+import { playlistMixin } from 'common/js/mixin';
 
 import ListView from '@/base/list-view/list-view';
 
@@ -17,6 +19,7 @@ const HOT_TITLE = '热门';
 const HOT_SINGER_LEN = 10;
 
 export default {
+  mixins: [playlistMixin],
   // name: '歌手',
   components: {
     ListView
@@ -31,7 +34,7 @@ export default {
   },
   methods: {
     selectSinger(singer) {
-      // console.log(Singer);
+      console.log(singer);
       this.setSinger(singer);
       this.$router.push({
         path: `/singer/${singer.id}`
@@ -83,6 +86,11 @@ export default {
         return a.title.charCodeAt(0) - b.title.charCodeAt(0);
       });
       return hot.concat(ret);
+    },
+    handlePlaylist(playlist) {
+      const bottom = playlist.length > 0 ? '60px' : '';
+      this.$refs.singer.$el.style.bottom = bottom;
+      this.$refs.list.refresh();
     },
     ...mapMutations({
       setSinger: SET_SINGER

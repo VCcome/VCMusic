@@ -15,7 +15,7 @@
         <div class="middle">
           <div class="middle-l">
             <div class="cd-wrapper">
-              <div class="cd">
+              <div class="cd" :class="cdCls">
                 <img class="image" :src="currentSong.image">
               </div>
             </div>
@@ -62,22 +62,26 @@
           <p class="desc" v-html="currentSong.singer"></p>
         </div>
         <div class="control">
+          <i :class="miniIcon" @click.stop="togglePlaying"></i>
         </div>
         <div class="control" @click.stop="showPlaylist">
           <i class="icon-playlist"></i>
         </div>
       </div>
     </transition>
-    <audio ref="audio" :src="currentSong.url"></audio>
+    <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error"></audio>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
+import { getVKey } from 'api/song';
+
 export default {
   data() {
     return {
-      currentShow: ''
+      currentShow: '',
+      songReady: false
     };
   },
   mounted() {
@@ -103,17 +107,33 @@ export default {
       'playlist',
       'fullScreen',
       'currentSong',
-      'currentIndex'
+      'currentIndex',
+      'playing'
     ])
   },
   watch: {
-    currentSong() {
-      this.$nextTick(() => {
-        this.$refs.audio.play();
+    currentIndex() { // 获取歌曲vkey，watch的顺序：currentIndex的顺序写在currentSong前面，会先执行currentIndex函数里面的代码
+      console.log('index', this.currentIndex);
+      let mid = this.currentSong.mid;
+      getVKey(mid).then(res => {
+        // console.log('vkey', res);
+        this.currentSong.url += res; // Todo 这样拼接并不安全，最佳实践应该是Song对象添加一个字段vkey存储动态的vkey，然后通过computed计算audio的src属性src=url+vkey
+        this.$nextTick(() => {
+          this.$refs.audio.play();
+        });
       });
     },
-    currentIndex() {
-      
+    currentSong() {
+      // console.log('song', this.currentSong);
+      // this.$nextTick(() => {
+      //   this.$refs.audio.play();
+      // });
+    },
+    playing(newPlaying) {
+      const audio = this.$refs.audio;
+      this.$nextTick(() => {
+        newPlaying ? audio.play() : audio.pause();
+      });
     }
   },
   methods: {
@@ -124,14 +144,50 @@ export default {
       this.setFullScreen(true);
     },
     changeMode() { },
-    prev() { },
-    next() { },
-    togglePlaying() { },
+    next() {
+      if (!this.songReady) {
+        return;
+      }
+      let index = this.currentIndex + 1;
+      if (index === this.playlist.length) {
+        index = 0;
+      }
+      this.setCurrentIndex(index);
+      if (!this.playing) {
+        this.togglePlaying();
+      }
+      this.songReady = false;
+    },
+    prev() {
+      if (!this.songReady) {
+        return;
+      }
+      let index = this.currentIndex - 1;
+      if (index === -1) {
+        index = this.playlist.length - 1;
+      }
+      this.setCurrentIndex(index);
+      if (!this.playing) {
+        this.togglePlaying();
+      }
+      this.songReady = false;
+    },
+    ready() {
+      this.songReady = true;
+    },
+    error() {
+      this.songReady = true; // 防止因为网速等错误锁死程序
+    },
+    togglePlaying() {
+      this.setPlayingState(!this.playing);
+    },
     toggleFavorite() { },
     getFavoriteIcon() { },
     showPlaylist() { },
     ...mapMutations({
-      setFullScreen: 'SET_FULL_SCREEN'
+      setFullScreen: 'SET_FULL_SCREEN',
+      setPlayingState: 'SET_PLAYING_STATE',
+      setCurrentIndex: 'SET_CURRENT_INDEX'
     })
   }
 };

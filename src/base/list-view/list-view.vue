@@ -1,5 +1,5 @@
 <template>
-  <scroll :data="data" class="list-view" ref="listScroll" :listenScroll="listenScroll" :probeType="probeType" @scroll="scroll">
+  <scroll :data="data" class="list-view" ref="listScroll" :listenScroll="listenScroll" :probeType="probeType" @scroll="scroll" @refresh="refresh">
     <ul>
       <li v-for="(group, index) in data" :key="index" class="list-group" ref="listGroup">
         <h2 class="list-group-title">{{group.title}}</h2>
@@ -106,6 +106,9 @@ export default {
     },
     scroll(pos) {
       this.scrollY = pos.y; // 滚动高度
+    },
+    refresh() {
+      this.$refs.listScroll.refresh();
     },
     scrollTo(index) { // BScrll的滚动到元素（scrollToElement）函数
       // if (index >= 0 && index <= this.listHeight.length - 2) {} // 只有快捷菜单才执行，快捷菜单的顶部和底部空白区域不执行

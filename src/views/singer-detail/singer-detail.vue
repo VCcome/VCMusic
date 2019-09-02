@@ -44,7 +44,8 @@ export default {
         });
         return;
       }
-      getSingerDetail().then(res => {
+      let singerId = this.singer.id;
+      getSingerDetail(singerId).then(res => {
         // console.log(res.songlist);
         this.songs = this._normalizeSongs(res.songlist);
         // console.log(this.songs); // Song类型

@@ -30,11 +30,13 @@ import Scroll from '@/base/scroll/scroll';
 import Loading from '@/base/loading/loading';
 import SongList from '@/base/song-list/song-list';
 import { mapActions, mapGetters } from 'vuex';
-import { getVKey } from 'api/song';
+// import { getVKey } from 'api/song';
+import { playlistMixin } from 'common/js/mixin';
 
 const RESERVED_HEIGHT = 40; // 滚动覆盖时顶部预留高度
 
 export default {
+  mixins: [playlistMixin],
   components: {
     Scroll,
     Loading,
@@ -127,16 +129,25 @@ export default {
   },
   methods: {
     selectSong(song, index) {
-      // let that = this;
-      getVKey(song.mid).then(res => {
-        console.log(res);
-        this.songs[index].url += res;
-        console.log(this.songs[index]);
-        this.selectPlay({
-          list: this.songs,
-          index
-        });
+      this.selectPlay({
+        list: this.songs,
+        index
       });
+      // let that = this;
+      // getVKey(song.mid).then(res => {
+      //   console.log(res);
+      //   this.songs[index].url += res;
+      //   // console.log(this.songs[index]);
+      //   this.selectPlay({
+      //     list: this.songs,
+      //     index
+      //   });
+      // });
+    },
+    handlePlaylist(playlist) {
+      const bottom = playlist.length > 0 ? '60px' : '';
+      this.$refs.list.$el.style.bottom = bottom;
+      this.$refs.list.refresh();
     },
     back() {
       this.$router.back();

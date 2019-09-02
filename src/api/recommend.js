@@ -1,10 +1,11 @@
 // import axios from 'axios';
-import { ERR_OK } from './config';
+import { ERR_OK, NET_WORK } from './config';
 import * as http from 'common/js/http';
 
 // @title 获取推荐轮播图数据
 export function _getRecommend() {
-  let url = '/mockData/recommend.json';
+  let url = NET_WORK ? 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg' : '/mockData/recommend.json';
+  // let url = '/mockData/recommend.json';
   // const data = Object.assign({}, commonParams, {
   //   formData: '此处为自定义数据'
   // });

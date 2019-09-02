@@ -36,8 +36,10 @@ import Slider from '@/base/slider/slider';
 import Scroll from '@/base/scroll/scroll';
 import Loading from '@/base/loading/loading';
 import { _getRecommend, _getDiscList } from 'api/recommend';
+import { playlistMixin } from 'common/js/mixin';
 
 export default {
+  mixins: [playlistMixin],
   data() {
     return {
       recommends: [],
@@ -99,6 +101,11 @@ export default {
         this.checkloaded = true;
         this.$refs.scroll.refresh();
       }
+    },
+    handlePlaylist(playlist) {
+      const bottom = playlist.length > 0 ? '60px' : '';
+      this.$refs.scroll.$el.style.bottom = bottom;
+      this.$refs.scroll.refresh();
     }
   }
 };
