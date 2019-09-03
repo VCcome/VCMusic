@@ -104,8 +104,10 @@ export default {
     },
     handlePlaylist(playlist) {
       const bottom = playlist.length > 0 ? '60px' : '';
-      this.$refs.scroll.$el.style.bottom = bottom;
-      this.$refs.scroll.refresh();
+      this.$nextTick(() => {
+        this.$refs.recommend.style.bottom = bottom;
+        this.$refs.scroll.refresh();
+      });
     }
   }
 };
