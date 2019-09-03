@@ -27,10 +27,10 @@
             <span class="dot" :class="{'active':currentShow==='lyric'}"></span>
           </div>
           <div class="progress-wrapper">
-            <span class="time time-l"></span>
+            <span class="time time-l">{{format(currentTime)}}</span>
             <div class="progress-bar-wrapper">
             </div>
-            <span class="time time-r"></span>
+            <span class="time time-r">{{format(currentSong.duration)}}</span>
           </div>
           <div class="operators">
             <div class="icon i-left" @click="changeMode">
@@ -69,7 +69,7 @@
         </div>
       </div>
     </transition>
-    <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error"></audio>
+    <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime"></audio>
   </div>
 </template>
 
@@ -81,7 +81,8 @@ export default {
   data() {
     return {
       currentShow: '',
-      songReady: false
+      songReady: false,
+      currentTime: 0 // 当前歌曲播放时间
     };
   },
   mounted() {
@@ -177,6 +178,23 @@ export default {
     },
     error() {
       this.songReady = true; // 防止因为网速等错误锁死程序
+    },
+    updateTime(e) {
+      this.currentTime = e.target.currentTime; // 更新歌曲播放时间
+    },
+    format(interval) {
+      interval = interval | 0; // 向下取整
+      let minutes = interval / 60 | 0;
+      let seconds = this._pad(interval % 60);
+      return `${minutes}:${seconds}`;
+    },
+    _pad(num, n = 2) { // n位补零函数
+      let len = num.toString().length;
+      while (len < n) {
+        num = '0' + num;
+        len++;
+      }
+      return num;
     },
     togglePlaying() {
       this.setPlayingState(!this.playing);

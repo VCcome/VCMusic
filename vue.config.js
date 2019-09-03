@@ -82,7 +82,28 @@ module.exports = {
         onProxyReq(proxyReq, req, res) {
           // add custom header to request
           proxyReq.setHeader('Origin', 'https://y.qq.com');
-          proxyReq.setHeader('Referer', 'https://y.qq.com/portal/singer_list.html');
+          proxyReq.setHeader('Referer', 'https://y.qq.com/m/index.html');
+        }
+      },
+      '/search': {
+        target: 'https://c.y.qq.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/search': '/soso/fcgi-bin/search_for_qq_cp'
+        },
+        onProxyReq(proxyReq, req, res) {
+          // add custom header to request
+          proxyReq.setHeader('Origin', 'https://y.qq.com');
+          proxyReq.setHeader('Referer', 'https://y.qq.com/m/index.html');
+        }
+      },
+      'https://c.y.qq.com': {
+        target: 'https://c.y.qq.com',
+        changeOrigin: true,
+        onProxyReq(proxyReq, req, res) {
+          // add custom header to request
+          proxyReq.setHeader('Origin', 'https://y.qq.com');
+          proxyReq.setHeader('Referer', 'https://y.qq.com/m/index.html');
         }
       }
     }
