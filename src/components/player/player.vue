@@ -29,6 +29,7 @@
           <div class="progress-wrapper">
             <span class="time time-l">{{format(currentTime)}}</span>
             <div class="progress-bar-wrapper">
+              <progress-bar :percent="percent" @percentChange="onProgressBarChange"></progress-bar>
             </div>
             <span class="time time-r">{{format(currentSong.duration)}}</span>
           </div>
@@ -62,7 +63,9 @@
           <p class="desc" v-html="currentSong.singer"></p>
         </div>
         <div class="control">
-          <i :class="miniIcon" @click.stop="togglePlaying"></i>
+          <progress-circle :radius="radius" :percent="percent">
+            <i class="icon-mini" :class="miniIcon" @click.stop="togglePlaying"></i>
+          </progress-circle>
         </div>
         <div class="control" @click.stop="showPlaylist">
           <i class="icon-playlist"></i>
@@ -70,6 +73,7 @@
       </div>
     </transition>
     <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime"></audio>
+    <!-- <audio ref="audio" src="http://localhost:8080/笑场.m4a" @canplay="ready" @error="error" @timeupdate="updateTime"></audio> -->
   </div>
 </template>
 
@@ -77,16 +81,24 @@
 import { mapGetters, mapMutations } from 'vuex';
 import { getVKey } from 'api/song';
 
+import ProgressBar from '@/base/progress-bar/progress-bar';
+import ProgressCircle from '@/base/progress-circle/progress-circle';
+
 export default {
+  components: {
+    ProgressBar,
+    ProgressCircle
+  },
   data() {
     return {
       currentShow: '',
       songReady: false,
-      currentTime: 0 // 当前歌曲播放时间
+      currentTime: 0, // 当前歌曲播放时间
+      radius: 32 // mini播放按钮的高度
     };
   },
   mounted() {
-    console.log('audio', this.$refs.audio.src);
+    // console.log('audio', this.$refs.audio.src);
   },
   computed: {
     cdCls() {
@@ -102,7 +114,7 @@ export default {
       return this.songReady ? '' : 'disable';
     },
     percent() {
-      return 'this.currentTime / this.currentSong.duration';
+      return this.currentTime / this.currentSong.duration;
     },
     ...mapGetters([
       'playlist',
@@ -202,6 +214,12 @@ export default {
     toggleFavorite() { },
     getFavoriteIcon() { },
     showPlaylist() { },
+    onProgressBarChange(percent) {
+      this.$refs.audio.currentTime = this.currentSong.duration * percent;
+      if (!this.playing) {
+        this.togglePlaying();
+      }
+    },
     ...mapMutations({
       setFullScreen: 'SET_FULL_SCREEN',
       setPlayingState: 'SET_PLAYING_STATE',
