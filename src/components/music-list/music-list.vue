@@ -131,6 +131,7 @@ export default {
     selectSong(song, index) {
       this.selectPlay({
         list: this.songs,
+        song,
         index
       });
       // let that = this;
@@ -144,7 +145,7 @@ export default {
       //   });
       // });
     },
-    handlePlaylist(playlist) {
+    handlePlaylist(playlist) { // mixin中的playlist处理函数
       const bottom = playlist.length > 0 ? '60px' : '';
       this.$refs.list.$el.style.bottom = bottom;
       this.$refs.list.refresh();

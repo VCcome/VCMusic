@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     _getSingerDetail() {
-      if (!this.singer.id) {
+      if (!this.singer.id) { // 刷新返回
         this.$router.push({
           path: '/singer'
         });

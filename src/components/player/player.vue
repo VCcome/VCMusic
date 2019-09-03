@@ -97,10 +97,17 @@ export default {
       radius: 32 // mini播放按钮的高度
     };
   },
+  created() {
+    this.vkey = '';
+  },
   mounted() {
     // console.log('audio', this.$refs.audio.src);
   },
   computed: {
+    songUrl() { // audio.src=songUrl
+      console.log(this.vkey);
+      return this.currentSong.url + this.vkey;
+    },
     cdCls() {
       return this.playing ? 'play' : 'play pause';
     },
@@ -127,10 +134,13 @@ export default {
   watch: {
     currentIndex() { // 获取歌曲vkey，watch的顺序：currentIndex的顺序写在currentSong前面，会先执行currentIndex函数里面的代码
       console.log('index', this.currentIndex);
+      let that = this;
       let mid = this.currentSong.mid;
       getVKey(mid).then(res => {
-        // console.log('vkey', res);
+        // console.log('vkey', res); // vkey=res
         this.currentSong.url += res; // Todo 这样拼接并不安全，最佳实践应该是Song对象添加一个字段vkey存储动态的vkey，然后通过computed计算audio的src属性src=url+vkey
+        // this.setCurrentSongVkey(res); // 用mutation代替上面的Vuex操作--BUGbug改变currentIndexcurrentSong不会改变
+        that.vkey = res; // 用player组件内的变量代替修改state
         this.$nextTick(() => {
           this.$refs.audio.play();
         });
@@ -223,7 +233,8 @@ export default {
     ...mapMutations({
       setFullScreen: 'SET_FULL_SCREEN',
       setPlayingState: 'SET_PLAYING_STATE',
-      setCurrentIndex: 'SET_CURRENT_INDEX'
+      setCurrentIndex: 'SET_CURRENT_INDEX',
+      setCurrentSongVkey: 'SET_CURRENT_SONG_VKEY'
     })
   }
 };
