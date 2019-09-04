@@ -12,14 +12,21 @@
           <h1 class="title" v-html="currentSong.name"></h1>
           <h2 class="subtitle" v-html="currentSong.singer"></h2>
         </div>
-        <div class="middle">
-          <div class="middle-l">
+        <div class="middle" @touchstart.prevent="middleTouchStart" @touchmove.prevent="middleTouchMove" @touchend="middleTouchEnd">
+          <div class="middle-l" ref="middleL">
             <div class="cd-wrapper">
               <div class="cd" :class="cdCls">
                 <img class="image" :src="currentSong.image">
               </div>
             </div>
           </div>
+          <scroll class="middle-r" ref="lyricList" :data="currentLyric && currentLyric.lines">
+            <div class="lyric-wrapper">
+              <div v-if="currentLyric">
+                <p ref="lyricLine" class="text" :class="{'current': currentLineNum ===index}" v-for="(line,index) in currentLyric.lines" :key="index">{{line.txt}}</p>
+              </div>
+            </div>
+          </scroll>
         </div>
         <div class="bottom">
           <div class="dot-wrapper">
@@ -35,7 +42,7 @@
           </div>
           <div class="operators">
             <div class="icon i-left" @click="changeMode">
-              <i class="icon icon-sequence"></i>
+              <i class="icon" :class="iconMode"></i>
             </div>
             <div class="icon i-left" :class="disableCls">
               <i @click="prev" class="icon-prev"></i>
@@ -72,7 +79,7 @@
         </div>
       </div>
     </transition>
-    <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime"></audio>
+    <audio ref="audio" :src="songUrl" @canplay="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
     <!-- <audio ref="audio" src="http://localhost:8080/笑场.m4a" @canplay="ready" @error="error" @timeupdate="updateTime"></audio> -->
   </div>
 </template>
@@ -80,34 +87,46 @@
 <script>
 import { mapGetters, mapMutations } from 'vuex';
 import { getVKey } from 'api/song';
+// import { getVKey, getLyric } from 'api/song';
+import { playMode } from 'common/js/config';
+import { shuffle } from 'common/js/util';
+import Lyric from 'lyric-parser';
+import { prefixStyle } from 'common/js/dom';
 
 import ProgressBar from '@/base/progress-bar/progress-bar';
 import ProgressCircle from '@/base/progress-circle/progress-circle';
+import Scroll from '@/base/scroll/scroll';
+
+const transform = prefixStyle('transform');
+const transitionDuration = prefixStyle('transitionDuration');
 
 export default {
   components: {
     ProgressBar,
-    ProgressCircle
+    ProgressCircle,
+    Scroll
   },
   data() {
     return {
-      currentShow: '',
+      currentShow: 'cd',
+      songUrl: '',
       songReady: false,
       currentTime: 0, // 当前歌曲播放时间
+      currentLyric: null,
+      currentLineNum: 0, // 控制当前行歌词高亮的index
       radius: 32 // mini播放按钮的高度
     };
   },
   created() {
-    this.vkey = '';
+    this.touch = {};
   },
   mounted() {
     // console.log('audio', this.$refs.audio.src);
+    // getLyric().then(res => { // 写到Song这个class中去
+    //   console.log('lyric:', res);
+    // });
   },
   computed: {
-    songUrl() { // audio.src=songUrl
-      console.log(this.vkey);
-      return this.currentSong.url + this.vkey;
-    },
     cdCls() {
       return this.playing ? 'play' : 'play pause';
     },
@@ -117,6 +136,18 @@ export default {
     miniIcon() {
       return this.playing ? 'icon-pause-mini' : 'icon-play-mini';
     },
+    iconMode() {
+      let iconMode = '';
+      if (this.mode === playMode.sequence) {
+        iconMode = 'icon-sequence';
+      } else if (this.mode === playMode.loop) {
+        iconMode = 'icon-loop';
+      } else if (this.mode === playMode.random) {
+        iconMode = 'icon-random';
+      }
+      return iconMode;
+      // return this.mode === playMode.sequence ? 'icon-sequence' : playMode.loop ? 'icon-loop' : 'icon-random';
+    },
     disableCls() {
       return this.songReady ? '' : 'disable';
     },
@@ -125,32 +156,36 @@ export default {
     },
     ...mapGetters([
       'playlist',
+      'sequenceList',
       'fullScreen',
       'currentSong',
       'currentIndex',
-      'playing'
+      'playing',
+      'mode'
     ])
   },
   watch: {
     currentIndex() { // 获取歌曲vkey，watch的顺序：currentIndex的顺序写在currentSong前面，会先执行currentIndex函数里面的代码
-      console.log('index', this.currentIndex);
+      // console.log('index', this.currentIndex);
+    },
+    currentSong(newSong, oldSong) {
+      if (newSong.id === oldSong.id) {
+        return;
+      }
+      this.currentSong.getVKey();
+      this.getLyric();
+      // console.log('song', this.currentSong, newSong);
       let that = this;
       let mid = this.currentSong.mid;
       getVKey(mid).then(res => {
         // console.log('vkey', res); // vkey=res
-        this.currentSong.url += res; // Todo 这样拼接并不安全，最佳实践应该是Song对象添加一个字段vkey存储动态的vkey，然后通过computed计算audio的src属性src=url+vkey
-        // this.setCurrentSongVkey(res); // 用mutation代替上面的Vuex操作--BUGbug改变currentIndexcurrentSong不会改变
-        that.vkey = res; // 用player组件内的变量代替修改state
-        this.$nextTick(() => {
-          this.$refs.audio.play();
+        // this.currentSong.url += res; // Todo 这样拼接并不安全，最佳实践应该是Song对象添加一个字段vkey存储动态的vkey，然后通过computed计算audio的src属性src=url+vkey
+        // that.setCurrentSongVkey(res); // 用mutation代替上面的Vuex操作--BUGbug改变currentIndexcurrentSong不会改变--change log:dele state currentSong
+        that.songUrl = that.currentSong.url + res;
+        that.$nextTick(() => {
+          that.$refs.audio.play();
         });
       });
-    },
-    currentSong() {
-      // console.log('song', this.currentSong);
-      // this.$nextTick(() => {
-      //   this.$refs.audio.play();
-      // });
     },
     playing(newPlaying) {
       const audio = this.$refs.audio;
@@ -166,9 +201,86 @@ export default {
     open() {
       this.setFullScreen(true);
     },
-    changeMode() { },
+    middleTouchStart(e) {
+      this.touch.initiated = true;
+      const touch = e.touches[0];
+      this.touch.startX = touch.pageX;
+      this.touch.startY = touch.pageY;
+    },
+    middleTouchMove(e) {
+      if (!this.touch.initiated) {
+        return;
+      }
+      const touch = e.touches[0];
+      const deltaX = touch.pageX - this.touch.startX;
+      const deltaY = touch.pageY - this.touch.startY;
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        return;
+      }
+      const left = this.currentShow === 'cd' ? 0 : -window.innerWidth;
+      const offsetWidth = Math.min(0, Math.max(-window.innerWidth, left + deltaX));
+      this.touch.percent = Math.abs(offsetWidth / window.innerWidth);
+      this.$refs.lyricList.$el.style[transform] = `translate3d(${offsetWidth}px,0,0)`;
+      this.$refs.lyricList.$el.style[transitionDuration] = 0;
+      this.$refs.middleL.style.opacity = 1 - this.touch.percent;
+      this.$refs.middleL.style[transitionDuration] = 0;
+    },
+    middleTouchEnd() {
+      let offsetWidth;
+      let opacity;
+      if (this.currentShow === 'cd') {
+        if (this.touch.percent > 0.1) {
+          offsetWidth = -window.innerWidth;
+          opacity = 0;
+          this.currentShow = 'lyric';
+        } else {
+          offsetWidth = 0;
+          opacity = 1;
+        }
+      } else {
+        if (this.touch.percent < 0.9) {
+          offsetWidth = 0;
+          this.currentShow = 'cd';
+          opacity = 1;
+        } else {
+          offsetWidth = -window.innerWidth;
+          opacity = 0;
+        }
+      }
+      const time = 300;
+      this.$refs.lyricList.$el.style[transform] = `translate3d(${offsetWidth}px,0,0)`;
+      this.$refs.lyricList.$el.style[transitionDuration] = `${time}ms`;
+      this.$refs.middleL.style.opacity = opacity;
+      this.$refs.middleL.style[transitionDuration] = `${time}ms`;
+      this.touch.initiated = false;
+    },
+    changeMode() {
+      const mode = (this.mode + 1) % 3;
+      this.setPlayMode(mode);
+      let list = null;
+      if (this.mode === playMode.sequence) {
+        list = this.sequenceList;
+      } else if (this.mode === playMode.loop) {
+        list = Array.of(this.currentSong);
+      } else if (this.mode === playMode.random) {
+        list = shuffle(this.sequenceList);
+      }
+      console.log(list);
+      this.resetCurrentIndex(list);
+      this.setPlaylist(list);
+    },
+    resetCurrentIndex(list) {
+      let index = list.findIndex((item) => {
+        return item.id === this.currentSong.id;
+      });
+      this.setCurrentIndex(index);
+    },
     next() {
       if (!this.songReady) {
+        return;
+      }
+      if (this.playlist.length === 1) {
+        this.loop();
         return;
       }
       let index = this.currentIndex + 1;
@@ -183,6 +295,10 @@ export default {
     },
     prev() {
       if (!this.songReady) {
+        return;
+      }
+      if (this.playlist.length === 1) {
+        this.loop();
         return;
       }
       let index = this.currentIndex - 1;
@@ -203,6 +319,37 @@ export default {
     },
     updateTime(e) {
       this.currentTime = e.target.currentTime; // 更新歌曲播放时间
+    },
+    getLyric() {
+      this.currentSong.getLyric().then((lyric) => {
+        this.currentLyric = new Lyric(lyric, this.handleLyric);
+        if (this.playing) {
+          this.currentLyric.play();
+        }
+        // console.log(this.currentLyric);
+      });
+    },
+    handleLyric({ lineNum, text }) { // 歌词初始化后的处理函数
+      this.currentLineNum = lineNum;
+      console.log(lineNum);
+      if (lineNum > 5) {
+        let lineEl = this.$refs.lyricLine[lineNum - 5];
+        this.$refs.lyricList.scrollToElement(lineEl, 1000);
+      } else {
+        this.$refs.lyricList.scrollTo(0, 0, 1000);
+      }
+    },
+    end() {
+      if (this.mode === playMode.loop) {
+        this.loop();
+      } else {
+        this.next();
+      }
+    },
+    loop() {
+      this.$refs.audio.currentTime = 0;
+      this.$refs.audio.play();
+      this.setPlayingState(true);
     },
     format(interval) {
       interval = interval | 0; // 向下取整
@@ -234,7 +381,8 @@ export default {
       setFullScreen: 'SET_FULL_SCREEN',
       setPlayingState: 'SET_PLAYING_STATE',
       setCurrentIndex: 'SET_CURRENT_INDEX',
-      setCurrentSongVkey: 'SET_CURRENT_SONG_VKEY'
+      setPlayMode: 'SET_PLAY_MODE',
+      setPlaylist: 'SET_PLAYLIST'
     })
   }
 };

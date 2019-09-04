@@ -1,8 +1,13 @@
 import { ERR_OK } from './config';
 import * as http from 'common/js/http';
 
-// @title 获取歌曲资源动态的vKey
-// return vKey
+/**
+ * @title 获取歌曲资源动态的vKey
+ *
+ * @export
+ * @param {*} mid
+ * @returns vkey
+ */
 export function getVKey(mid) {
   let vKeyUrl = 'https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg';
   return http.get(vKeyUrl, {
@@ -27,6 +32,33 @@ export function getVKey(mid) {
   }).then(res => {
     if (res.code === ERR_OK) {
       return res.data.items[0].vkey;
+    }
+  });
+};
+
+/**
+ * @title 获取歌词
+ *
+ * @export
+ * @param {string} [musicId='237243943']
+ * @returns lyric
+ */
+export function getLyric(musicId = '237243943') {
+  let url = `/getLyric?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&nobase64=1&musicid=${musicId}&songtype=0&_=1567566961929&jsonpCallback=getLyric`;
+  return http.get(url).then(res => {
+    // console.log(res);
+    if (typeof res === 'string') {
+      let num1 = res.indexOf('(');
+      let num2 = res.indexOf(')');
+      let resultData = JSON.parse(res.substring(num1 + 1, num2));
+      // console.log(resultData);
+      if (resultData.code === ERR_OK) {
+        return resultData.lyric;
+      }
+    } else {
+      if (res.code === ERR_OK) {
+        return res.data;
+      }
     }
   });
 };

@@ -1,3 +1,5 @@
+import { getVKey, getLyric } from 'api/song';
+
 export default class Song {
   constructor({ id, mid, singer, name, album, duration, image, url }) {
     this.id = id;
@@ -8,7 +10,35 @@ export default class Song {
     this.duration = duration;
     this.image = image;
     this.url = url;
-    this.vkey = '';
+  };
+
+  getVKey() {
+    if (this.vkey) {
+      return Promise.resolve(this.vkey);
+    }
+    return new Promise((resolve, reject) => {
+      getVKey(this.mid).then(vkey => {
+        this.vkey = vkey;
+        console.log('vkey-Song:', vkey);
+        resolve(this.vkey);
+      });
+    });
+  };
+
+  getLyric() {
+    if (this.lyric) {
+      return Promise.resolve(this.lyric);
+    }
+    return new Promise((resolve, reject) => {
+      getLyric(this.id).then(lyric => {
+        // console.log('lyric:', lyric);
+        let div = document.createElement('div'); // 对歌词进行解析
+        div.innerHTML = lyric;
+        this.lyric = div.firstChild.nodeValue;
+        resolve(this.lyric);
+        // console.log('divlyric', div.firstChild.nodeValue);
+      });
+    });
   };
 };
 

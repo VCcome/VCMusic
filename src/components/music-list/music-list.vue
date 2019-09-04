@@ -7,7 +7,7 @@
     <div class="bg-image" ref="bgImage" :style="bgStyle">
       <!-- bg-image撑开空间,长宽比例10：7：width：100%; height: 0; padding-top: 70%; -->
       <div class="play-wrapper">
-        <div ref="playBtn" v-show="songs.length>0" :style="playStyle" class="play">
+        <div ref="playBtn" v-show="songs.length>0" :style="playStyle" class="play" @click="random">
           <i class="icon-play"></i>
           <span class="text">随机播放全部</span>
         </div>
@@ -68,6 +68,7 @@ export default {
   created() {
     this.probeType = 3;
     this.listenScroll = true;
+    // this.$http.get('https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&nobase64=1&musicid=237243943&songtype=0&_=1567568104390');
   },
   mounted() {
     this.imageHeight = this.$refs.bgImage.clientHeight; // bg高度
@@ -145,6 +146,11 @@ export default {
       //   });
       // });
     },
+    random() {
+      this.randomPlay({
+        list: this.songs
+      });
+    },
     handlePlaylist(playlist) { // mixin中的playlist处理函数
       const bottom = playlist.length > 0 ? '60px' : '';
       this.$refs.list.$el.style.bottom = bottom;
@@ -157,15 +163,16 @@ export default {
       this.scrollY = pos.y; // return滚动距离
     },
     ...mapActions([
-      'selectPlay'
+      'selectPlay',
+      'randomPlay'
     ])
   }
 };
 </script>
 
 <style scoped lang="scss">
-@import "~common/scss/variable";
-@import "~common/scss/mixin";
+@import "common/scss/variable";
+@import "common/scss/mixin";
 
 .music-list {
   position: fixed;

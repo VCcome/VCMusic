@@ -105,6 +105,18 @@ module.exports = {
           proxyReq.setHeader('Origin', 'https://y.qq.com');
           proxyReq.setHeader('Referer', 'https://y.qq.com/m/index.html');
         }
+      },
+      '/getLyric': {
+        target: 'https://c.y.qq.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/getLyric': '/lyric/fcgi-bin/fcg_query_lyric.fcg'
+        },
+        onProxyReq(proxyReq, req, res) {
+          // add custom header to request
+          proxyReq.setHeader('Origin', 'http://evil.com/');
+          proxyReq.setHeader('Referer', 'https://i.y.qq.com/v8/playsong.html?songmid=002tD7MA2eB1IL,003VaeQu4E4QmT,003JCOaR4dktYn,000tH1uC1aUokl,001FGQba3i10mw,001PitNy0e03u2,0007H7ZR3ufHw3,004WTlYT2kL99w,000Rhqpg3dBQKr,001xwUwW32VflK');
+        }
       }
     }
   }
